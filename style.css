@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+*/
+
+:root{
+    --strong-cyan:#26c0ab;
+    --very-dark-cyan:hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan:hsl(184, 14%, 56%);
+    --light-grayish-cyan:hsl(185, 41%, 84%);
+    --very-light-grayish-cyan:hsl(189, 41%, 97%);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: "Space Mono", monospace;
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+    .box:hover,#custum:focus{
+        border: 2px solid #26c0ab;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .logo{
+        margin-bottom: 60px;
+    }
+    main{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        width: 800px;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        
+        gap: 30px;
+        .input{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            
+            padding: 10px;
+            .bills, .number-of-people{
+                
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0;
+                p{
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                }
+                .input{
+                    background-color:var(--very-light-grayish-cyan);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 10px 10px;
+                   
+                
+                input{
+                    width: 80px;
+                   height: 20px;
+                  direction: rtl;
+                  border: none;
+                  font-size: 24px;
+                  outline: none;
+                   background-color: transparent;
+                }
+            }
+               
+                }
+              
+            .select-tip{
+                display: flex;
+                flex-direction: column;
+                gap: 10px 20px;
+                margin: 20px 0;
+                p{
+                    font-size: 14px;
+                }
+                button{
+                    width: 100px;
+                    height: 38px;
+                    border: none;
+                    background-color: var(--very-dark-cyan);
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    transition: .4s ease-in-out;
+                    
+                }
+                button:hover{
+                    background-color: var(--strong-cyan);
+                    color: var(--dark-grayish-cyan);
+                }
+                input{
+                    width: 100px;
+                    height: 38px;
+                    border: none;
+                    border-radius: 3px;
+                    background-color: var(--very-light-grayish-cyan);
+                    font-size: 24px;
+                
+                    direction: rtl;
+                    outline: none;
+                }
+            }
+            .number-of-people{
+                position: relative;
+               span{
+                color: red;
+                font-size: 14px;
+                position: absolute;
+                right: 10px;
+               }
+             
+            }
+        }
+        .output{
+            flex: 1;
+
+            background-color: var(--very-dark-cyan);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+            height: 300px;
+            .tip-amount,.total{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 10px;
+                .left{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    p{
+                        color: white;
+                        
+
+                    }
+                    span{
+                        font-size: 12px;
+                        color: var(--grayish-cyan);
+                    }
+                }
+                .show-num{
+                    font-size: 45px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    color: var(--strong-cyan);
+                    p{
+                        font-weight: 700;
+                        
+                    }
+                    span{
+                        font-weight: 700;
+                    }
+                }
+            }
+            button{
+                padding: 10px 0;
+                border: none;
+                border-radius: 5px;
+                background-color: hsla(183, 63%, 33%, 0.486);
+                font-weight: 900;
+                letter-spacing: 1px;
+                color: var(--very-dark-cyan);
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: .8s;
+            }
+            button:hover{
+                background-color: var(--strong-cyan);
+            }
+          
+        }
+    }
+}
+
+
+
+@media (max-width:480px) {
+
+    body{
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .logo{
+            margin-bottom: 5px;
+            margin-top: 20px;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+
+            .input{
+
+                .select-tip{
+                   
+                    width: 260px;
+                   position: relative;
+                    
+                    .raw-1{
+                      display: grid;
+                      grid-template-columns: 1;
+                      gap: 10px;
+                        
+                    }
+                    .raw-2{
+                     display: grid;
+                     grid-template-columns: 1;
+                     gap: 10px;
+                     position: absolute;
+                     right: 10px;
+                     top: 35px;
+                       
+                    }
+                }
+                .number-of-people{
+                    span,p{
+                        font-size: 8px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

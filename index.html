@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <img class="logo" src="logo.svg" alt="">
+  <main>
+    <section class="input">
+      <div class="bills">
+        <p>Bill</p>
+          <div class="input box">
+            <img src="icon-dollar.svg" alt="">
+            <input id="bill" type="number" placeholder="0">
+          </div>
+         
+      </div>
+
+      <div class="select-tip">
+        <p>Select Tip %</p>
+        <div class="raw-1">
+          <button id="btn-1">5%</button>
+          <button id="btn-2">10%</button>
+          <button id="btn-3">15%</button>
+        </div>
+        <div class="raw-2">
+          <button id="btn-4">25%</button>
+          <button id="btn-5">50%</button>
+          <input id="custum" type="number" placeholder="Custom">
+        </div>
+        
+      </div>
+      <div class="number-of-people">
+        <p>Number of Peaple</p>
+        <span id="error">can't be zero</span>
+        <div class="input box people-box">
+          <img src="icon-person.svg" alt="">
+          <input id="number-of-peaple" type="number" placeholder="0">
+          
+        </div>
+          
+        
+        
+      </div>
+    </section>
+    <section class="output">
+
+      <div class="top">
+        <div class="tip-amount">
+          <div class="left">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="show-num "><span>$</span> <p id="tip-amount">0.00</p></div>
+        </div>
+  
+        <div class="total">
+          <div class="left">
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <div class="show-num tip-num"><span>$</span> <p id="total-amount">0.00</p></div>
+        </div>
+      </div>
+     <button id="btn-6">Reset</button>
+    </section>
+  </main>
+
+    <script src="main.js"></script>
+    <!--
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+</body>
+</html>
